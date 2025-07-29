@@ -1,0 +1,23 @@
+.navBar{
+  background-color: blueviolet;
+  width: 100%;
+}
+
+.navLogo{
+  margin-left: 1rem;
+  display: inline;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.navItem{
+  margin-right: 3rem;
+}
+
+
+main{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
