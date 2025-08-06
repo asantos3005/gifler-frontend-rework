@@ -21,3 +21,9 @@ main{
   justify-content: center;
   align-items: center;
 }
+
+
+.registerFormContainer{
+  display: flex;
+  flex-direction: column;
+}
