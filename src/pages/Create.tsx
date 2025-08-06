@@ -18,15 +18,31 @@ function MyForm() {
 
   const [previews, setPreviews] = useState<string[]>([]);
 
-  const onSubmit = (data: any) => {
-    const title = data.title;
-    const files: FileList = data.images;
+  const onSubmit = async (data: any) => {
+  const title = data.title;
+  const files: FileList = data.images;
 
-    console.log("Title:", title);
-    console.log("Selected files:", files);
+  const formData = new FormData();
+  formData.append("title", title);
 
-    // You can now send `title` and `files` to the backend (e.g. via FormData)
-  };
+  // Append each file individually
+  Array.from(files).forEach((file) => {
+    formData.append("images", file); // multiple files under the same field name
+  });
+
+  try {
+    const response = await fetch("http://localhost:3000/gif/create", {
+      method: "POST",
+      body: formData,
+      // Note: DO NOT manually set Content-Type when using FormData — browser handles it
+    });
+
+    const result = await response.json();
+    console.log("Success:", result);
+  } catch (error) {
+    console.error("Error uploading gif:", error);
+  }
+};
 
   
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -55,7 +71,6 @@ function MyForm() {
         />
         {errors.title && <p>This field is required</p>}
 
-        <br />
         <br />
 
         <label>Upload Images:</label>

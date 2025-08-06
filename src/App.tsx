@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Create from './pages/Create';
+import Register from './pages/Register';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/create" element={< Create/>} /> 
-       
+        <Route path="/create" element={< Register/>} /> 
       </Routes>
     </Router>
   );
