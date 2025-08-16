@@ -39,3 +39,7 @@ main{
   margin: 0;
   padding: 0;
 }
+
+.formSpacing{
+  margin-top: 1rem;
+}

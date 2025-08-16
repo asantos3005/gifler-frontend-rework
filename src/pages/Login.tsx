@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 
 type LoginFormInputs = {
   email: string;
@@ -40,7 +41,7 @@ function MyForm() {
 
   return (
     <div>
-      <h2>Register</h2>
+      <h2>Login</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="registerFormContainer">
 
@@ -74,6 +75,11 @@ function MyForm() {
           <input type="submit" value="Register" />
         </div>
       </form>
+      <div className="formSpacing">
+        <p>New to Gifler?</p>
+        <Link to={'/register'}>Sign Up</Link>
+      </div>
+     
     </div>
   );
 }
