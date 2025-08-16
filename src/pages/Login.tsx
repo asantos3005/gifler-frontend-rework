@@ -1,10 +1,8 @@
 import { useForm } from "react-hook-form";
 
 type RegisterFormInputs = {
-  firstName: string;
-  lastName: string;
   email: string;
-  password: string;
+  password: string
 };
 
 function Register() {
@@ -24,8 +22,6 @@ function MyForm() {
 
   const onSubmit = async (data: RegisterFormInputs) => {
     const formBody = {
-      firstName: data.firstName,
-      lastName: data.lastName,
       email: data.email,
       password: data.password
     }
@@ -47,18 +43,6 @@ function MyForm() {
       <h2>Register</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="registerFormContainer">
-          
-          <div className="formGroupSpacing">
-            <label>First Name</label>
-            <input {...register("firstName", { required: "First Name is required" })} />
-            {errors.firstName && <p className="errorMessage">{errors.firstName.message}</p>}
-          </div>
-
-          <div className="formGroupSpacing">
-            <label>Last Name</label>
-            <input {...register("lastName", { required: "Last Name is required" })} />
-            {errors.lastName && <p className="errorMessage">{errors.lastName.message}</p>}
-          </div>
 
           <div className="formGroupSpacing">
             <label>Email</label>

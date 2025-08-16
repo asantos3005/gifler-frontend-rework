@@ -27,3 +27,15 @@ main{
   display: flex;
   flex-direction: column;
 }
+
+.formGroupSpacing{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.errorMessage{
+  color: red;
+  margin: 0;
+  padding: 0;
+}
