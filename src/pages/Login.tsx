@@ -72,7 +72,7 @@ function MyForm() {
             {errors.password && <p className="errorMessage">{errors.password.message}</p>}
           </div>
 
-          <input type="submit" value="Register" />
+          <input type="submit" value="Login" />
         </div>
       </form>
       <div className="formSpacing">
