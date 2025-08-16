@@ -1,11 +1,11 @@
 import { useForm } from "react-hook-form";
 
-type RegisterFormInputs = {
+type LoginFormInputs = {
   email: string;
   password: string
 };
 
-function Register() {
+function Login() {
   return (
     <main>
       <MyForm />
@@ -18,9 +18,9 @@ function MyForm() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<RegisterFormInputs>();
+  } = useForm<LoginFormInputs>();
 
-  const onSubmit = async (data: RegisterFormInputs) => {
+  const onSubmit = async (data: LoginFormInputs) => {
     const formBody = {
       email: data.email,
       password: data.password
@@ -28,7 +28,7 @@ function MyForm() {
 
     console.log("Submitting:", formBody);
 
-    const response = await fetch("http://localhost:3000/auth/register", {
+    const response = await fetch("http://localhost:3000/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formBody),
@@ -78,4 +78,4 @@ function MyForm() {
   );
 }
 
-export default Register;
+export default Login;
