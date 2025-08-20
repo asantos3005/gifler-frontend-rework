@@ -1,43 +1,71 @@
+/*NAV BAR STYLE*/
 .navBar{
-  background-color: blueviolet;
+  background-color: rgb(25, 22, 27);
   width: 100%;
   display: flex;
   align-items: center;
+  position: sticky;
+  top: 0;
 }
 
 .navLogo{
   margin-left: 1rem;
   display: inline;
+  color: azure;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .navItem{
+  color: azure;
   margin-right: 3rem;
 }
 
 .rightPlaceNavItem{
+  color: azure;
   margin-left: auto;
   margin-right: 1rem;
 }
 
+.heroBanner {
+  max-width: 40%;
+  max-height: 50%;
+}
+
+
+/*GENERAL STYLING*/
 main{
   width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+/* Special centered layout */
+main.centered {
   justify-content: center;
   align-items: center;
 }
 
+.angled-gradient {
+  background: linear-gradient(70deg, blue, pink);
+}
 
-.registerFormContainer{
+
+
+/*FORM STYLING*/
+.formContainer{
   display: flex;
   flex-direction: column;
+  background-color: rgb(36, 31, 31);
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.438);
 }
 
 .formGroupSpacing{
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .errorMessage{
@@ -49,3 +77,9 @@ main{
 .formSpacing{
   margin-top: 1rem;
 }
+
+input {
+  min-width: 20rem;
+  min-height: 2rem;
+}
+

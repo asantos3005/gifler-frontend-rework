@@ -9,9 +9,7 @@ type RegisterFormInputs = {
 
 function Register() {
   return (
-    <main>
       <MyForm />
-    </main>
   );
 }
 
@@ -43,10 +41,10 @@ function MyForm() {
   };
 
   return (
-    <div>
+    <div className="formContainer">
       <h2>Register</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="registerFormContainer">
+        <div >
           
           <div className="formGroupSpacing">
             <label>First Name</label>

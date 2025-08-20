@@ -3,9 +3,7 @@ import { useState } from "react";
 
 function Create() {
   return (
-    <main>
       <MyForm />
-    </main>
   );
 }
 
@@ -60,28 +58,32 @@ function MyForm() {
 };
 
   return (
-    <div>
+    <div className="formContainer">
       <h2>Create a GIF</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label>Title:</label>
-        <input
-          type="text"
-          {...register("title", { required: true })}
-          placeholder="Enter a title"
-        />
-        {errors.title && <p>This field is required</p>}
+        <div className="formGroupSpacing">
+          <label>Title:</label>
+          <input
+            type="text"
+            {...register("title", { required: true })}
+            placeholder="Enter a title"
+          />
+          {errors.title && <p>This field is required</p>}
+        </div>
+        
 
-        <br />
-
-        <label>Upload Images:</label>
-        <input
-          type="file"
-          accept="image/*"
-          multiple
-          {...register("images", { required: true })}
-          onChange={handleFileChange}
-        />
-        {errors.images && <p>Please upload at least one image</p>}
+        <div className="formGroupSpacing">
+          <label>Upload Images:</label>
+          <input
+            type="file"
+            accept="image/*"
+            multiple
+            {...register("images", { required: true })}
+            onChange={handleFileChange}
+          />
+          {errors.images && <p>Please upload at least one image</p>}
+        </div>
+        
 
         {/* Image previews */}
         <div style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
@@ -90,7 +92,7 @@ function MyForm() {
           ))}
         </div>
 
-        <br />
+          
         <input type="submit" value="Create GIF" />
       </form>
     </div>

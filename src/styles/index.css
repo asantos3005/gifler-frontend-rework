@@ -5,7 +5,9 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background: linear-gradient(70deg, blue, pink);
+  min-height: 100vh;
+  /*background-color: #242424;*/
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,6 +15,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  min-height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+}
 
 body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   margin: 0;

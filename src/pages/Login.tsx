@@ -8,9 +8,7 @@ type LoginFormInputs = {
 
 function Login() {
   return (
-    <main>
       <MyForm />
-    </main>
   );
 }
 
@@ -40,7 +38,7 @@ function MyForm() {
   };
 
   return (
-    <div>
+    <div className="formContainer">
       <h2>Login</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="registerFormContainer">

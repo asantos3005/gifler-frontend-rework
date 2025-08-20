@@ -1,0 +1,12 @@
+[
+    {
+        "gifURL": "12345",
+        "gifName": "sampleGIF1",
+        "creationDate": "11/08/2025"
+    },
+    {
+        "gifURL": "11111",
+        "gifName": "sampleGIF2",
+        "creationDate": "10/08/2025"
+    }
+]
