@@ -59,6 +59,7 @@ main.centered {
   background-color: rgb(36, 31, 31);
   padding: 3rem;
   border-radius: 10px;
+
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.438);
 }
 
@@ -81,5 +82,25 @@ main.centered {
 input {
   min-width: 20rem;
   min-height: 2rem;
+}
+
+
+/* COLLECTION STYLES */
+.collectionPage{
+  padding: 2rem;
+}
+
+.collectionContainer{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contentContainer{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(36, 31, 31);
+  padding: 1rem;
+  border-radius: 10px;
 }
 
